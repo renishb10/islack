@@ -13,7 +13,7 @@ class App extends Component {
       channels: [],
       users:[],
       messages:[],
-      activeChannel: null
+      activeChannel: {}
     }
   }
 
@@ -56,11 +56,11 @@ class App extends Component {
             {...this.state}
             setUserName={ this.setUserName.bind(this) }
           />
-          <MessageSection
+        </div>
+        <MessageSection
             {...this.state}
             addMessage={ this.addMessage.bind(this) }
-          />
-        </div>
+        />
       </div>
     )
   }

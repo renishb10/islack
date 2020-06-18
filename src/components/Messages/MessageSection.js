@@ -7,9 +7,9 @@ class MessageSection extends Component {
     render() {
         let { activeChannel } = this.props
         return (
-            <div className='message-container panel panel-default'>
+            <div className='messages-container panel panel-default'>
                 <div className='panel-heading'>
-                    <strong>{activeChannel}</strong>
+                    <strong>{activeChannel.name || 'Select A Channel'}</strong>
                 </div>
                 <div className='panel-body messages'>
                     <MessageList {...this.props} />
